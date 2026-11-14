@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    @apply font-serif font-semibold leading-tight;
+  }
+  :focus-visible {
+    outline: 3px solid #C58B55;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-caramel bg-caramel px-6 py-3 font-medium text-white transition duration-200 hover:-translate-y-0.5;
+  }
+  .btn-ghost {
+    @apply border-chocolat bg-transparent text-chocolat hover:bg-chocolat hover:text-creme;
+  }
+  .btn-wa {
+    @apply border-[#25D366] bg-[#25D366] hover:bg-[#1ebe5a];
+  }
+  .eyebrow {
+    @apply mb-3 text-xs font-bold uppercase tracking-[0.18em] text-caramel;
+  }
+  .section {
+    @apply px-5 py-16 sm:px-10 md:py-24 lg:px-16;
+  }
+}
+
+@layer components {
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-caramel transition-transform duration-300;
+  }
+  .link-underline:hover::after,
+  .link-underline.router-link-active::after {
+    @apply scale-x-100;
+  }
+  .btn:active {
+    @apply scale-[0.98];
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.page-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: none;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
