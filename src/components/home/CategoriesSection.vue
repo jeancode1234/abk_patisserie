@@ -4,6 +4,7 @@ import SectionTitle from '@/components/ui/SectionTitle.vue'
 import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
 import PhotoBox from '@/components/ui/PhotoBox.vue'
 import { categories } from '@/data/categories'
+
 </script>
 
 <template>
@@ -17,7 +18,7 @@ import { categories } from '@/data/categories'
             :to="{ path: '/produits', query: { categorie: c.slug } }"
             class="group flex h-full flex-col overflow-hidden rounded-3xl border border-beige bg-white shadow-sm transition duration-500 hover:-translate-y-1.5 hover:shadow-xl"
           >
-            <PhotoBox :alt="c.name" ratio="aspect-[4/3] rounded-none" class="!rounded-none" />
+            <PhotoBox :src="c.image" :alt="c.name" ratio="aspect-[4/3] rounded-none" class="!rounded-none" />
             <div class="flex flex-1 flex-col gap-2 p-6">
               <h3 class="text-2xl text-chocolat">{{ c.name }}</h3>
               <p class="flex-1 text-sm leading-relaxed text-chocolat/75">{{ c.short }}</p>
