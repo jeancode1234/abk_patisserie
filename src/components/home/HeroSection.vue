@@ -13,7 +13,7 @@ import HeroImg from '../../assets/images/hero_img.png'
     <div class="mx-auto grid min-h-[80vh] max-w-7xl items-center gap-12 px-5 py-16 sm:px-10 md:grid-cols-2 lg:px-12 2xl:px-14">
       <RevealOnScroll>
         <p class="eyebrow !text-beige">Bienvenue dans notre univers gourmand</p>
-        <h1 class="text-4xl xs:text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">Le plaisir gourmand à chaque bouchée.</h1>
+        <h1 class="text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">Le plaisir gourmand à chaque bouchée.</h1>
         <p class="mt-6 max-w-lg text-lg leading-relaxed text-beige/90">
           Découvrez un univers de saveurs et de gourmandises à travers nos créations sucrées et salées, préparées avec passion pour rendre vos moments encore plus délicieux.
         </p>
